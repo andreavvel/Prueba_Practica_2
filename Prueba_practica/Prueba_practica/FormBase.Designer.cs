@@ -57,6 +57,7 @@ namespace Prueba_practica
             this.btnmenu.TabIndex = 1;
             this.btnmenu.Text = "Menú";
             this.btnmenu.UseVisualStyleBackColor = false;
+            this.btnmenu.Click += new System.EventHandler(this.btnmenu_Click);
             // 
             // label1
             // 

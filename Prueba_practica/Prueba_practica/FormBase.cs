@@ -16,5 +16,12 @@ namespace Prueba_practica
         {
             InitializeComponent();
         }
+
+        private void btnmenu_Click(object sender, EventArgs e)
+        {
+            FormMenu menu = new FormMenu();
+            this.Hide();
+            menu.Show();
+        }
     }
 }
