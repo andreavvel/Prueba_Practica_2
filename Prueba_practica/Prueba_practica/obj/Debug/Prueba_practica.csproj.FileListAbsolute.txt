@@ -1,0 +1,11 @@
+C:\Users\Andrea\OneDrive\Documentos\GitHub\Prueba_Practica_2\Prueba_practica\Prueba_practica\bin\Debug\Prueba_practica.exe.config
+C:\Users\Andrea\OneDrive\Documentos\GitHub\Prueba_Practica_2\Prueba_practica\Prueba_practica\bin\Debug\Prueba_practica.exe
+C:\Users\Andrea\OneDrive\Documentos\GitHub\Prueba_Practica_2\Prueba_practica\Prueba_practica\bin\Debug\Prueba_practica.pdb
+C:\Users\Andrea\OneDrive\Documentos\GitHub\Prueba_Practica_2\Prueba_practica\Prueba_practica\obj\Debug\Prueba_practica.csprojAssemblyReference.cache
+C:\Users\Andrea\OneDrive\Documentos\GitHub\Prueba_Practica_2\Prueba_practica\Prueba_practica\obj\Debug\Prueba_practica.FormBase.resources
+C:\Users\Andrea\OneDrive\Documentos\GitHub\Prueba_Practica_2\Prueba_practica\Prueba_practica\obj\Debug\Prueba_practica.Properties.Resources.resources
+C:\Users\Andrea\OneDrive\Documentos\GitHub\Prueba_Practica_2\Prueba_practica\Prueba_practica\obj\Debug\Prueba_practica.csproj.GenerateResource.cache
+C:\Users\Andrea\OneDrive\Documentos\GitHub\Prueba_Practica_2\Prueba_practica\Prueba_practica\obj\Debug\Prueba_practica.csproj.CoreCompileInputs.cache
+C:\Users\Andrea\OneDrive\Documentos\GitHub\Prueba_Practica_2\Prueba_practica\Prueba_practica\obj\Debug\Prueba_practica.exe
+C:\Users\Andrea\OneDrive\Documentos\GitHub\Prueba_Practica_2\Prueba_practica\Prueba_practica\obj\Debug\Prueba_practica.pdb
+C:\Users\Andrea\OneDrive\Documentos\GitHub\Prueba_Practica_2\Prueba_practica\Prueba_practica\obj\Debug\Prueba_practica.FormMenu.resources
