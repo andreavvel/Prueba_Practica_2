@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Prueba_practica
 {
-    class Comida
+    public class Comida
     {
         private double precio;
         public double Precio

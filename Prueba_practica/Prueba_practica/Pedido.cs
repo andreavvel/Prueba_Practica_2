@@ -8,26 +8,30 @@ namespace Prueba_practica
 {
     public class Pedido
     {
-
-        private int cantidadhambu;
-        public int CantidadHambu
+        private string item;
+        public string Item
         {
-            get { return cantidadhambu; }
-            set { cantidadhambu = value; }
+            get { return item; }
+            set { item = value; }
+        }
+        private double precioindiv;
+        public double Precioindiv
+        {
+            get { return precioindiv; }
+            set { precioindiv = value; }
         }
 
-        private int cantidadpapas;
-        public int Cantidadpapas
+        private int cantidad;
+        public int Cantidad
         {
-            get { return cantidadpapas; }
-            set { cantidadpapas = value; }
+            get { return cantidad; }
+            set { cantidad = value; }
         }
-
-        private int cantidadbebida;
-        public int Cantidadbebida
+        private double total;
+        public double Total
         {
-            get { return cantidadbebida; }
-            set { cantidadbebida = value; }
+            get { return total; }
+            set { total = value; }
         }
 
         //Metodo para calcular total de orden

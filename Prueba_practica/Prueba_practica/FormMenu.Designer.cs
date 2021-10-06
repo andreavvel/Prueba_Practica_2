@@ -45,22 +45,29 @@ namespace Prueba_practica
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnsig = new System.Windows.Forms.Button();
+            this.btnagregar0 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dgvpedido = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvpedido)).BeginInit();
             this.SuspendLayout();
             // 
             // btnsalir
             // 
-            this.btnsalir.Location = new System.Drawing.Point(508, 308);
+            this.btnsalir.Location = new System.Drawing.Point(508, 507);
+            this.btnsalir.Size = new System.Drawing.Size(133, 41);
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // btnmenu
             // 
-            this.btnmenu.Location = new System.Drawing.Point(506, 58);
-            this.btnmenu.Size = new System.Drawing.Size(133, 34);
-            this.btnmenu.Text = "Agregar";
-            this.btnmenu.Click += new System.EventHandler(this.btnmenu_Click);
+            this.btnmenu.Location = new System.Drawing.Point(360, 279);
+            this.btnmenu.Size = new System.Drawing.Size(10, 15);
+            this.btnmenu.Text = "Actual";
             // 
             // label1
             // 
@@ -84,7 +91,7 @@ namespace Prueba_practica
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(316, 70);
+            this.label2.Location = new System.Drawing.Point(316, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 3;
@@ -116,7 +123,7 @@ namespace Prueba_practica
             "1",
             "2",
             "3"});
-            this.cmboxhambu.Location = new System.Drawing.Point(394, 67);
+            this.cmboxhambu.Location = new System.Drawing.Point(394, 72);
             this.cmboxhambu.Name = "cmboxhambu";
             this.cmboxhambu.Size = new System.Drawing.Size(68, 21);
             this.cmboxhambu.TabIndex = 6;
@@ -228,18 +235,88 @@ namespace Prueba_practica
             this.btnsig.BackColor = System.Drawing.Color.DarkCyan;
             this.btnsig.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsig.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnsig.Location = new System.Drawing.Point(369, 308);
+            this.btnsig.Location = new System.Drawing.Point(360, 507);
             this.btnsig.Name = "btnsig";
-            this.btnsig.Size = new System.Drawing.Size(133, 53);
+            this.btnsig.Size = new System.Drawing.Size(133, 41);
             this.btnsig.TabIndex = 19;
             this.btnsig.Text = "Siguiente";
             this.btnsig.UseVisualStyleBackColor = false;
             this.btnsig.Click += new System.EventHandler(this.btnsig_Click);
             // 
+            // btnagregar0
+            // 
+            this.btnagregar0.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnagregar0.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar0.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnagregar0.Location = new System.Drawing.Point(506, 59);
+            this.btnagregar0.Name = "btnagregar0";
+            this.btnagregar0.Size = new System.Drawing.Size(133, 34);
+            this.btnagregar0.TabIndex = 20;
+            this.btnagregar0.Text = "Agregar";
+            this.btnagregar0.UseVisualStyleBackColor = false;
+            this.btnagregar0.Click += new System.EventHandler(this.btnagregar0_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(232, 75);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 18);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "$3.25";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(232, 151);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 18);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "$1.99";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(232, 238);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 18);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "$1.50";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(296, 297);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(110, 18);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Su pedido es:";
+            // 
+            // dgvpedido
+            // 
+            this.dgvpedido.BackgroundColor = System.Drawing.Color.LightBlue;
+            this.dgvpedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvpedido.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.dgvpedido.Location = new System.Drawing.Point(29, 327);
+            this.dgvpedido.Name = "dgvpedido";
+            this.dgvpedido.Size = new System.Drawing.Size(598, 174);
+            this.dgvpedido.TabIndex = 25;
+            this.dgvpedido.DoubleClick += new System.EventHandler(this.dgvpedido_DoubleClick);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(651, 373);
+            this.ClientSize = new System.Drawing.Size(651, 552);
+            this.Controls.Add(this.dgvpedido);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnagregar0);
             this.Controls.Add(this.btnsig);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox3);
@@ -274,9 +351,16 @@ namespace Prueba_practica
             this.Controls.SetChildIndex(this.pictureBox3, 0);
             this.Controls.SetChildIndex(this.label8, 0);
             this.Controls.SetChildIndex(this.btnsig, 0);
+            this.Controls.SetChildIndex(this.btnagregar0, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.label9, 0);
+            this.Controls.SetChildIndex(this.label10, 0);
+            this.Controls.SetChildIndex(this.label11, 0);
+            this.Controls.SetChildIndex(this.dgvpedido, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvpedido)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,5 +383,11 @@ namespace Prueba_practica
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnsig;
+        private System.Windows.Forms.Button btnagregar0;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridView dgvpedido;
     }
 }
