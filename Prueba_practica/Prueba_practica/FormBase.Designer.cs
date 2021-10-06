@@ -45,6 +45,7 @@ namespace Prueba_practica
             this.btnsalir.TabIndex = 0;
             this.btnsalir.Text = "Salir";
             this.btnsalir.UseVisualStyleBackColor = false;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // btnmenu
             // 
@@ -64,11 +65,11 @@ namespace Prueba_practica
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(70, 64);
+            this.label1.Location = new System.Drawing.Point(53, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(472, 28);
+            this.label1.Size = new System.Drawing.Size(526, 28);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Bienvenido al restaurante Las Conchitas";
+            this.label1.Text = "Bienvenido al restaurante Hamburguesa Feliz";
             // 
             // FormBase
             // 

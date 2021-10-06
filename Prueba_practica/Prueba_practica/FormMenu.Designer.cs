@@ -51,6 +51,9 @@ namespace Prueba_practica
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.dgvpedido = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,14 +62,14 @@ namespace Prueba_practica
             // 
             // btnsalir
             // 
-            this.btnsalir.Location = new System.Drawing.Point(508, 507);
+            this.btnsalir.Location = new System.Drawing.Point(508, 499);
             this.btnsalir.Size = new System.Drawing.Size(133, 41);
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // btnmenu
             // 
-            this.btnmenu.Location = new System.Drawing.Point(360, 279);
-            this.btnmenu.Size = new System.Drawing.Size(10, 15);
+            this.btnmenu.Location = new System.Drawing.Point(617, 313);
+            this.btnmenu.Size = new System.Drawing.Size(10, 10);
             this.btnmenu.Text = "Actual";
             // 
             // label1
@@ -235,7 +238,7 @@ namespace Prueba_practica
             this.btnsig.BackColor = System.Drawing.Color.DarkCyan;
             this.btnsig.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsig.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnsig.Location = new System.Drawing.Point(360, 507);
+            this.btnsig.Location = new System.Drawing.Point(360, 499);
             this.btnsig.Name = "btnsig";
             this.btnsig.Size = new System.Drawing.Size(133, 41);
             this.btnsig.TabIndex = 19;
@@ -290,7 +293,7 @@ namespace Prueba_practica
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(296, 297);
+            this.label11.Location = new System.Drawing.Point(296, 291);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(110, 18);
             this.label11.TabIndex = 24;
@@ -301,16 +304,49 @@ namespace Prueba_practica
             this.dgvpedido.BackgroundColor = System.Drawing.Color.LightBlue;
             this.dgvpedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvpedido.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.dgvpedido.Location = new System.Drawing.Point(29, 327);
+            this.dgvpedido.Location = new System.Drawing.Point(29, 313);
             this.dgvpedido.Name = "dgvpedido";
-            this.dgvpedido.Size = new System.Drawing.Size(598, 174);
+            this.dgvpedido.Size = new System.Drawing.Size(487, 174);
             this.dgvpedido.TabIndex = 25;
             this.dgvpedido.DoubleClick += new System.EventHandler(this.dgvpedido_DoubleClick);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SeaShell;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(522, 313);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 57);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Eliminar selección";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(522, 382);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(121, 13);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "*Seleccione el item que ";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(542, 405);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(74, 13);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "desea eliminar";
             // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(651, 552);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvpedido);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -333,6 +369,7 @@ namespace Prueba_practica
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnagregar1);
             this.Name = "FormMenu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMenu_FormClosed);
             this.Controls.SetChildIndex(this.btnmenu, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.btnsalir, 0);
@@ -357,6 +394,9 @@ namespace Prueba_practica
             this.Controls.SetChildIndex(this.label10, 0);
             this.Controls.SetChildIndex(this.label11, 0);
             this.Controls.SetChildIndex(this.dgvpedido, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.label12, 0);
+            this.Controls.SetChildIndex(this.label13, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -367,27 +407,29 @@ namespace Prueba_practica
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnagregar1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmboxhambu;
-        private System.Windows.Forms.ComboBox cmboxpapas;
-        private System.Windows.Forms.ComboBox cmboxbebida;
-        private System.Windows.Forms.Button btnagregar2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnsig;
-        private System.Windows.Forms.Button btnagregar0;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView dgvpedido;
+        protected System.Windows.Forms.Button btnagregar1;
+        protected System.Windows.Forms.Label label2;
+        protected System.Windows.Forms.Label label3;
+        protected System.Windows.Forms.Label label4;
+        protected System.Windows.Forms.ComboBox cmboxhambu;
+        protected System.Windows.Forms.ComboBox cmboxpapas;
+        protected System.Windows.Forms.ComboBox cmboxbebida;
+        protected System.Windows.Forms.Button btnagregar2;
+        protected System.Windows.Forms.Label label6;
+        protected System.Windows.Forms.PictureBox pictureBox1;
+        protected System.Windows.Forms.PictureBox pictureBox2;
+        protected System.Windows.Forms.Label label7;
+        protected System.Windows.Forms.PictureBox pictureBox3;
+        protected System.Windows.Forms.Label label8;
+        protected System.Windows.Forms.Button btnagregar0;
+        protected System.Windows.Forms.Label label5;
+        protected System.Windows.Forms.Label label9;
+        protected System.Windows.Forms.Label label10;
+        protected System.Windows.Forms.Button btnsig;
+        public System.Windows.Forms.Label label11;
+        protected System.Windows.Forms.DataGridView dgvpedido;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }

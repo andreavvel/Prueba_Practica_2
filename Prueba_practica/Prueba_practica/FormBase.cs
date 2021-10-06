@@ -23,5 +23,12 @@ namespace Prueba_practica
             this.Hide();
             menu.Show();
         }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show
+                ("¿Desea salir de la aplicación?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            { this.Close(); }
+        }
     }
 }

@@ -10,6 +10,9 @@ namespace Prueba_practica
 {
     public partial class FormMenu : Prueba_practica.FormBase
     {
+        //Servirán para calcular el total
+        public double cantidad1=0, cantidad2=0, cantidad3=0;
+
         //Empieza el indice para el DataGridView
         private int edit_indice = -1;
 
@@ -40,9 +43,6 @@ son los de las propiedades*/
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show
-                ("¿Desea salir de la aplicación?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
-            { this.Close(); }
         }
 
         private void btnagregar0_Click(object sender, EventArgs e)
@@ -50,6 +50,8 @@ son los de las propiedades*/
             hamburguesa.Precio = 3.25;
             pedidoactual.Item = "Hamburguesa";
             pedidoactual.Cantidad = Convert.ToInt32(cmboxhambu.Text);
+
+            cantidad1 = hamburguesa.Precio*pedidoactual.Cantidad;
 
             //creo un objeto de la clase pedido y guardo a través de las propiedades
             Pedido ped = new Pedido();
@@ -80,6 +82,8 @@ con todos los datos que recolecté*/
             pedidoactual.Item = "Papitas fritas";
             pedidoactual.Cantidad = Convert.ToInt32(cmboxpapas.Text);
 
+            cantidad2 = papas.Precio* pedidoactual.Cantidad;
+
             //creo un objeto de la clase pedido y guardo a través de las propiedades
             Pedido ped = new Pedido();
             ped.Item = pedidoactual.Item;
@@ -106,6 +110,7 @@ con todos los datos que recolecté*/
             pedidoactual.Item = "Bebida";
             pedidoactual.Cantidad = Convert.ToInt32(cmboxbebida.Text);
 
+            cantidad3 = bebida.Precio * pedidoactual.Cantidad;
             //creo un objeto de la clase pedido y guardo a través de las propiedades
             Pedido ped = new Pedido();
             ped.Item = pedidoactual.Item;
@@ -126,18 +131,6 @@ con todos los datos que recolecté*/
             actualizarGrid();//llamamos al procedimiento que guarda en datagrid
         }
 
-        private void btnsig_Click(object sender, EventArgs e)
-        {
-            double total= pedidoactual.CalcularTotal(pedidoactual.CalcularTotal_1(hamburguesa.Precio, pedidoactual.Cantidad), pedidoactual.CalcularTotal_2(papas.Precio, pedidoactual.Cantidad), pedidoactual.CalcularTotal_3(bebida.Precio, pedidoactual.Cantidad));
-            if(total==0)
-            { MessageBox.Show("No ha seleccionado nada"); }
-            else 
-            {   
-                MessageBox.Show("su total es " + total); 
-
-            }
-        }
-
         private void dgvpedido_DoubleClick(object sender, EventArgs e)
         {
             //Guarda el item en el DGV
@@ -150,6 +143,40 @@ valores que le pasa el listado*/
             pedidoactual.Item = ped.Item;
             hamburguesa.Precio = ped.Precioindiv;
             pedidoactual.Cantidad = ped.Cantidad;
+        }
+        private void btnsig_Click(object sender, EventArgs e)
+        {
+            pedidoactual.Total = cantidad1 + cantidad2 + cantidad3;
+            if (pedidoactual.Total == 0)
+            { MessageBox.Show("No ha seleccionado nada"); }
+            else
+            {
+                //MessageBox.Show("su total es " + total);
+                string mensaje = string.Format((pedidoactual.Total).ToString());
+                FormReg frmrecibe = new FormReg(mensaje); /* creo un objeto del segundo formulario,
+ adonde mando información*/
+                frmrecibe.Visible = true; // muestra el nuevo formulario
+                this.Visible = false; // esconde el formulario actual
+            }
+        }
+
+        private void FormMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (edit_indice > -1) //verifica si hay un índice seleccionado
+            {
+                Pedidos.RemoveAt(edit_indice);
+                edit_indice = -1; //resetea variable a -1
+                actualizarGrid();
+            }
+            else
+            {
+                MessageBox.Show("Debe dar doble click primero sobre item que desea eliminar");
+            }
         }
     }
 }
