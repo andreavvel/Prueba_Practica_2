@@ -40,5 +40,7 @@ namespace Prueba_practica
         {
             Application.Exit();
         }
+
+
     }
 }

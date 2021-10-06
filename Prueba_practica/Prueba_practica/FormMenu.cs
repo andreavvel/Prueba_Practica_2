@@ -157,6 +157,9 @@ valores que le pasa el listado*/
  adonde mando información*/
                 frmrecibe.Visible = true; // muestra el nuevo formulario
                 this.Visible = false; // esconde el formulario actual
+
+                //limpiamos el dgv para que cuando regrese el usuario no haya problemas
+                //no deja borrar filas de dgv con programación :(
             }
         }
 
