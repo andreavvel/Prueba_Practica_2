@@ -18,6 +18,7 @@ namespace Prueba_practica
 
         private void btndomicilio_Click(object sender, EventArgs e)
         {
+            //Asigno el precio fijo de envio y le sumo eso al total para mostrarlo al usuario
             lblenvio.Text = "2.50";
             double totalcompra = double.Parse(lbltotal.Text);
             double precioenvio = double.Parse(lblenvio.Text);
@@ -26,12 +27,14 @@ namespace Prueba_practica
 
         private void btnllevar_Click(object sender, EventArgs e)
         {
+            //No hay precio de envio asi que es 0 y se mantiene el total
             lblenvio.Text = "0.00";
             lblfinal.Text = lbltotal.Text;
         }
 
         private void btnfin_Click(object sender, EventArgs e)
         {
+            //Mensaje de compra finalizada
             MessageBox.Show("Gracias por su compra!");
             Application.Exit();
         }
@@ -40,7 +43,5 @@ namespace Prueba_practica
         {
             Application.Exit();
         }
-
-
     }
 }

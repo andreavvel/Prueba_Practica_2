@@ -11,7 +11,7 @@ namespace Prueba_practica
     public partial class FormMenu : Prueba_practica.FormBase
     {
         //Servirán para calcular el total
-        public double cantidad1=0, cantidad2=0, cantidad3=0;
+        public double cantidad1 = 0, cantidad2 = 0, cantidad3 = 0;
 
         //Empieza el indice para el DataGridView
         private int edit_indice = -1;
@@ -23,10 +23,8 @@ namespace Prueba_practica
         {
             dgvpedido.DataSource = null;
             dgvpedido.DataSource = Pedidos; /*los nombres de columna que veremos 
-son los de las propiedades*/
+            son los de las propiedades*/
         }
-
-
 
         //Objetos de la clase comida
         Comida hamburguesa = new Comida();
@@ -34,24 +32,21 @@ son los de las propiedades*/
         Comida bebida = new Comida();
         //Objetos de la clase pedido
         Pedido pedidoactual = new Pedido();
-        
+
         public FormMenu()
         {
             InitializeComponent();
-
-        }
-
-        private void btnsalir_Click(object sender, EventArgs e)
-        {
         }
 
         private void btnagregar0_Click(object sender, EventArgs e)
         {
+            //Asignamos los datos de la hamburguesa
             hamburguesa.Precio = 3.25;
             pedidoactual.Item = "Hamburguesa";
             pedidoactual.Cantidad = Convert.ToInt32(cmboxhambu.Text);
 
-            cantidad1 = hamburguesa.Precio*pedidoactual.Cantidad;
+            //Conseguimos el total de pedidos de hamburguesa
+            cantidad1 = hamburguesa.Precio * pedidoactual.Cantidad;
 
             //creo un objeto de la clase pedido y guardo a través de las propiedades
             Pedido ped = new Pedido();
@@ -78,11 +73,13 @@ con todos los datos que recolecté*/
 
         private void btnagregar1_Click(object sender, EventArgs e)
         {
+            //Asignamos los datos de las papitas
             papas.Precio = 1.99;
             pedidoactual.Item = "Papitas fritas";
             pedidoactual.Cantidad = Convert.ToInt32(cmboxpapas.Text);
 
-            cantidad2 = papas.Precio* pedidoactual.Cantidad;
+            //Conseguimos el total de pedidos de papitas
+            cantidad2 = papas.Precio * pedidoactual.Cantidad;
 
             //creo un objeto de la clase pedido y guardo a través de las propiedades
             Pedido ped = new Pedido();
@@ -106,11 +103,14 @@ con todos los datos que recolecté*/
 
         private void btnagregar2_Click(object sender, EventArgs e)
         {
+            //Asignamos los datos de la bebida
             bebida.Precio = 1.50;
             pedidoactual.Item = "Bebida";
             pedidoactual.Cantidad = Convert.ToInt32(cmboxbebida.Text);
 
+            //Conseguimos el total de pedidos de bebidas
             cantidad3 = bebida.Precio * pedidoactual.Cantidad;
+
             //creo un objeto de la clase pedido y guardo a través de las propiedades
             Pedido ped = new Pedido();
             ped.Item = pedidoactual.Item;
@@ -146,12 +146,12 @@ valores que le pasa el listado*/
         }
         private void btnsig_Click(object sender, EventArgs e)
         {
+            //Verificar si hay pedido válido, luego pasar al siguiente form
             pedidoactual.Total = cantidad1 + cantidad2 + cantidad3;
             if (pedidoactual.Total == 0)
             { MessageBox.Show("No ha seleccionado nada"); }
             else
             {
-                //MessageBox.Show("su total es " + total);
                 string mensaje = string.Format((pedidoactual.Total).ToString());
                 FormReg frmrecibe = new FormReg(mensaje); /* creo un objeto del segundo formulario,
  adonde mando información*/

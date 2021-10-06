@@ -64,7 +64,6 @@ namespace Prueba_practica
             // 
             this.btnsalir.Location = new System.Drawing.Point(508, 499);
             this.btnsalir.Size = new System.Drawing.Size(133, 41);
-            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // btnmenu
             // 
